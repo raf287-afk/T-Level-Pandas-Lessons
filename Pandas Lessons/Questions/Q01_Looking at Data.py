@@ -12,6 +12,7 @@ df = pd.read_csv('https://raw.githubusercontent.com/justmarkham/DAT8/master/data
 
 print("step 4")
 print("look at the first 25 entries")
+print(df.head(25))
 
 #Your code goes here:
 
@@ -20,6 +21,7 @@ input()
 
 print("step 5")
 print("look at the last 10 entries")
+print(df.tail(10))
 
 #Your code goes here:
 
@@ -28,7 +30,8 @@ input()
 
 print("step 6")
 print("find out the number of rows in the dataset")
-
+num_rows = len(df)
+print(f"the num of rows there are is {num_rows}")
 #Your code goes here:
 
 print("#"*10)
@@ -36,7 +39,8 @@ input()
 
 print("step 7")
 print("found out the number of columns in the dataset")
-
+num_colum = (len(df.columns))
+print(num_colum)
 #Your code goes here:
 
 print("#"*10)
@@ -44,7 +48,8 @@ input()
 
 print("step 8")
 print("print the name of all the columns")
-
+name_column = list(df.columns)
+print(name_column)
 #Your code goes here:
 
 print("#"*10)
@@ -52,6 +57,7 @@ input()
 
 print("step 9")
 print("find out how the data is indexed (what are the labels)")
+print(df.index)
 
 #Your code goes here:
 
@@ -60,14 +66,16 @@ input()
 
 print("step 10")
 print("what are the data types of each column")
+print(df.dtypes)
+
 
 #Your code goes here:
 
 print("#"*10)
-input()
 
 print("step 11")
 print("print only the 'occupation' column")
+print(df['occupation'])
 
 #Your code goes here:
 
@@ -76,6 +84,8 @@ input()
 
 print("step 12")
 print("find out how many different occupations are in this dataset")
+unique_occupations_list = df['occupation'].nunique()
+print(f"Unique occupations: {unique_occupations_list}")
 
 #Your code goes here:
 
